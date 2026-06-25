@@ -1028,10 +1028,8 @@ if(typeof gsap!=='undefined'&&typeof ScrollTrigger!=='undefined'){
   gsap.registerPlugin(ScrollTrigger);
   gsap.utils.toArray('.gallery-item img').forEach(img=>{gsap.fromTo(img,{scale:1.2,transformOrigin:'center center'},{scale:1,ease:'none',scrollTrigger:{trigger:img.closest('.gallery-item'),start:'top bottom',end:'bottom top',scrub:1}});});
   gsap.to('.hero-img-main',{y:60,ease:'none',scrollTrigger:{trigger:'.hero',start:'top top',end:'bottom top',scrub:true}});
-  gsap.utils.toArray('.product-card').forEach((card,i)=>{gsap.from(card,{y:80,opacity:0,duration:0.8,ease:'power3.out',scrollTrigger:{trigger:card,start:'top 90%',toggleActions:'play none none reverse'}});});
   gsap.to('.hero-title .line:nth-child(1) .line-inner',{color:'var(--pink)',scrollTrigger:{trigger:'.hero',start:'top top',end:'bottom top',scrub:true}});
   gsap.to('.marquee-track',{x:-100,ease:'none',scrollTrigger:{trigger:'.marquee-section',start:'top bottom',end:'bottom top',scrub:true}});
-  gsap.utils.toArray('.feature-card').forEach((card,i)=>{gsap.from(card,{y:60,opacity:0,duration:0.6,delay:i*0.1,ease:'power3.out',scrollTrigger:{trigger:card,start:'top 90%',toggleActions:'play none none reverse'}});});
 }
 
 /* ===== MAGNETIC ===== */
